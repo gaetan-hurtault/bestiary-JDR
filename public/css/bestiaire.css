@@ -1,0 +1,279 @@
+body{
+    background:#131313;
+    color:#f9f9f9!important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*
+{
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #70b836;
+  }
+  ::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #303030;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+html
+{
+  scroll-behavior: smooth;
+}
+#monster
+{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+.vignette img{
+    border-radius: 5px 0 0 5px;
+}
+.vignette
+{
+    width:500px;
+    height:350px;
+    display: flex;
+    background:#0D0D0D;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.vignette>.corps
+{
+    padding:10px;
+    width: 100%;
+}
+.vignette>.corps > p
+{
+    font-size: 12px;
+    text-align: justify;
+    height: 150px;
+    overflow: auto;
+    padding-right: 5px;
+}
+.corps>h3
+{
+ text-transform:uppercase;
+  font-size:20px!important;
+  color:#f9f9f9;
+  text-shadow: 0 0 10px #acff40;
+    font-family:"Century Gothic";
+  display:block;
+  text-align:center;
+  letter-spacing:3px;
+ position:relative;
+  padding-bottom:10px;
+}
+.corps>h3::after
+{
+    content:"";
+  position:absolute;
+  bottom:0;
+  left:20%;
+  width:60%;
+    height:3px;
+background: linear-gradient(90deg, rgb(108, 145, 41) 0%, rgb(164, 184, 76) 100%);
+}
+.corps span,#regionDesc>.content span{
+    text-transform: uppercase;
+}
+.corps i,#regionDesc>.content i{
+    padding-right: 5px;
+}
+.corps>h5
+{
+    margin:0px!important;
+    padding:5px 0px;
+}
+#arrowUp
+{
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    z-index:5000;
+    height:50px;
+    width:50px;
+    font-size:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D0D0D;
+    border-radius: 5px;
+    color:#f9f9f9;
+    cursor: pointer;
+}
+#arrowUp a
+{
+    color:#f9f9f9;
+}
+#region>div.content-nav
+  {
+    transition:height 0.5s ease;
+    font-size:12px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  }
+  #region>div.content-nav>div
+  {
+    padding:10px;
+  }
+  #region>div.content-nav>div>h3
+  {
+    text-transform:uppercase;
+    letter-spacing:3px;
+      font-family:"Century Gothic";
+    padding:0 10px 5px 0;
+    position:relative;
+     color:#f9f9f9
+  }
+  #region>div.content-nav>div>h3::after
+  {
+      content:"";
+    position:absolute;
+    bottom:0;
+    left:20%;
+    width:60%;
+      height:3px;
+  }
+  #region>div.content-nav>div>h3.rp
+  {
+    text-shadow: 0 0 10px #c56dff;
+  }
+  #region>div.content-nav>div>h3.rp::after
+  {
+  background: linear-gradient(90deg, rgb(143, 81, 179) 0%, rgb(168, 126, 196) 100%);
+  }
+  #region>div.content-nav a
+  {
+   color:#f0f0f0;
+    letter-spacing:2px;
+    padding-left:15px;
+    padding-bottom:5px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+  }
+  #region>div.content-nav a:hover
+  {
+   color:#f9f9f9!important; 
+  }
+  #region>div.content-nav a::before
+  {
+    position:absolute;
+    left:-50px;
+    content:url('https://i.imgur.com/2vV1lHD.png');
+    transition:left 0.3s ease;
+  }
+  #region>div.content-nav a:hover::before
+  {
+    left:0px;
+  }
+  #region>div.content-nav>div>ul
+  {
+    list-style: none;
+    padding:5px;
+  }
+  #regionDesc
+  {
+      padding:10px 100px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      height:350px;
+      overflow: hidden;
+  }
+  #regionDesc>.content
+  {
+    flex-basis:80%;
+    padding:10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D0D0D;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+  }
+  #regionDesc>img{
+      border-radius: 5px;
+  }
+  #regionDesc>.content>h2
+  {
+    text-transform:uppercase;
+      letter-spacing:3px;
+      font-family:"Century Gothic";
+      text-shadow: 0 0 10px #acff40;
+    font-size:50px;
+    font-weight:normal;
+    margin:0!important;
+  }
+  #regionDesc>.content>h5
+  {
+      font-size:20px;
+      margin:0px!important;
+      padding-top:10px;
+  }
+  #regionDesc>.content>p
+  {
+      height:150px;
+      width:100%;
+      overflow: auto;
+      padding:5px;
+      text-align: center;
+  }
+  #regionDesc>.content>a
+  {
+      color:white;
+  }
+  #navigation{
+      padding:10px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #navigation>a{
+      color:white;
+      padding:10px 10px;
+      border-radius: 5px;
+      text-shadow: 0 0 5px #0D0D0D;
+  }
+  #navigation i{
+      padding-right: 5px;
+  }
+  #navigation>#returnForum
+  {
+    background: linear-gradient(90deg, rgb(143, 81, 179) 0%, rgb(168, 126, 196) 100%);
+  }
+  #navigation>#seeMonster
+  {
+    background: linear-gradient(90deg, rgb(108, 145, 41) 0%, rgb(164, 184, 76) 100%); 
+  }

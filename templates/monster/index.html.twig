@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MonsterController!{% endblock %}
+
+{% block body %}
+
+{{"partRegions : [" }}
+    {% for partRegion in partRegions %}
+        {{
+        '{' ~ 
+        '"name" : "' ~ partRegion.name ~ '",' ~
+        '"icon" : "' ~ partRegion.icon ~ '",' ~
+        '"regions" :['
+        }}
+        {% for region in partRegion.regions %}
+        {{
+            '{' ~ 
+            '"name" : "' ~ region.name ~ '",' ~
+            '"slug" : "#' ~ region.slug ~ '",' ~
+            '"lien" : "' ~ region.lien ~ '",' ~
+            '"description" : "' ~ region.description ~ '",' ~
+            '"danger" : "' ~ region.danger ~ '",' ~
+            '"image" : "' ~ region.image ~ '",' ~
+            '"monsters" :['}}
+            {% for monster in region.monsters %}
+            {{
+                    '{"name" : "' ~ monster.name ~ '",' ~
+                    '"image" : "' ~ monster.image ~ '",' ~
+                    '"region" : "' ~ region.name ~ '",' ~
+                    '"description" : "' ~ monster.description ~ '",' ~
+                    '"rarete" : "' ~ monster.rarete ~ '",' ~
+                    '"deMin" : "' ~ monster.deMin ~ '",' ~
+                    '"deMax" : "' ~ monster.deMax ~ '",' ~
+                    '"rang" : "' ~ monster.rang ~ '"},'
+                }}
+            {% endfor %}
+            {{']},'}}
+        {% endfor %}
+        {{']},'}}
+    {% endfor %}
+{{']'}}
+
+{% endblock %}
